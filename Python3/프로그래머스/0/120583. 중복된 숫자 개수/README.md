@@ -1,6 +1,6 @@
 # [level 0] 중복된 숫자 개수 - 120583 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120583?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120583) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 11월 15일 01:56:54
+2024년 11월 15일 01:57:34
 
 ### 문제 설명
 
