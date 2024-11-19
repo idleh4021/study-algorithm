@@ -1,4 +1,12 @@
 def solution(score):
+    #등수만 구하면 되므로 평균 필요없음. 총합으로만 rank 처리
+    rank = sorted((sum(i) for i in score),reverse=True)
+    #**중요**배열에 같은 값이 존재하므로, 앞에있는 인덱스를 불러옴
+    return list(rank.index(sum(val))+1 for val in score)
+
+    
+    '''
+    기존답
     answer = []
     avg_score = []
     rank_num=1
@@ -13,3 +21,4 @@ def solution(score):
             avg_score[idx] = rank_num
         rank_num+=len(index_list)
     return avg_score
+    '''
