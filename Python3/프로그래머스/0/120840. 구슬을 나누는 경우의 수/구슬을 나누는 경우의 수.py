@@ -1,5 +1,9 @@
+import math
 def solution(balls, share):
-    
+    #참고용 답
+    return math.comb(balls,share)
+    '''
+    기존답
     list_up = list(range(balls-share+1,balls+1))
     list_down = list(range(1,share+1))
     
@@ -15,4 +19,5 @@ def solution(balls, share):
     for j in list_down:
         answer_down *=j
     return answer_up//answer_down
+    '''
     
