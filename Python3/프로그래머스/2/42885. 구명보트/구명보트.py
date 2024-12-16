@@ -1,25 +1,26 @@
-def solution(people,limit):
-    answer =0
+def solution(people, limit):
+    answer = 0
     people = sorted(people)
-    i,j = 0,len(people)-1
-    
-    if len(people) == 1 : return 1
-    while True:
-        #if i==len(people) or j<0 :
-        if i>j:
-            break
-        if people[i]+people[j]<=limit:
+    while len(people)>0:
+        if(len(people)==1):
             answer+=1
-            i+=1
-            j-=1
-            if i ==j :
-                answer+=1
-                break
-            elif i>j :
-                break
-            else :
-                continue
+            break
+        man = people.pop()
+        if man ==limit or limit-man <40:
+            answer+=1
+            continue
+        gap = limit-man
+        if gap in people :
+            #people.remove(gap)
+            del people[people.index(gap)]
+            answer+=1
         else :
-            answer+= 1
-            j-=1
+            if abs(limit-people[0])<abs(limit-people[-1]):
+                del people[0]
+                answer+=1
+            elif abs(limit-people[0])>=abs(limit-people[-1]) :
+                people.pop()              
+                answer+=1
+            else : answer+=2
+            
     return answer
