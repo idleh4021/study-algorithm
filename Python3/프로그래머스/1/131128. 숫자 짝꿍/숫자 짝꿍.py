@@ -1,17 +1,19 @@
+from collections import Counter
 def solution(X, Y):
     answer = '-1'
     X = sorted(X);
     Y= sorted(Y);
-    num_X = {}
-    num_Y = {}
+    num_X = dict(sorted(dict(Counter(X)).items()))
+    num_Y = dict(sorted(dict(Counter(Y)).items()))
     answer_list = []
-    for i in range(10):
-        str_num = str(i)
-        num_X[str_num] = X.count(str_num)
-        num_Y[str_num] = Y.count(str_num)
+    #for i in range(10):
+    #    str_num = str(i)
+    #    num_X[str_num] = X.count(str_num)
+    #    num_Y[str_num] = Y.count(str_num)
             
     for i in sorted(num_X,reverse=True):
         while True:
+            if not i in num_Y: break
             if num_X[i]==0: break
             if num_Y[i]==0: break
             answer_list.append(i)
