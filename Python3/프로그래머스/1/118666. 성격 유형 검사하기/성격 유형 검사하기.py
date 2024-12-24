@@ -32,9 +32,12 @@ def getloc(val):
         return fo    
     
 def getstrMax(t):
-    scores = [t[i] for i in t]
-    if scores[0]==scores[1]:
-        return sorted(i for i in t)[0]
-    else:
-        return max(t,key=t.get)
+    scores = [i for i in t]
+    return 0
+
+print(solution(
+ ["AN", "CF", "MJ", "RT", "NA"]	,[5, 3, 2, 7, 5]
     
+))
+
+
