@@ -1,17 +1,13 @@
 def solution(players, callings):
     answer = []
-    p_rank = {}
-    p_name = {}
+    p_dic = {}
     for i in range(len(players)) :
-        p_rank[players[i]] = i
-        p_name[i]=players[i]
-        
+        p_dic[players[i]] = i
+    
     for i in callings:
-        rank = p_rank[i]
-        p2 = p_name[rank-1]#list(p_rank.keys())[list(p_rank.values()).index(rank-1)]
-        p_rank[i]-=1
-        p_name[rank-1] = i
-        p_rank[p2]+=1
-        p_name[rank]=p2
+        rank = p_dic[i]
+        p2 = list(p_dic.keys())[list(p_dic.values()).index(rank-1)]
+        p_dic[i]-=1
+        p_dic[p2]+=1
         
-    return [i[0] for i in sorted(p_rank.items(), key=lambda x:x[1]) ]
+    return [i[0] for i in sorted(p_dic.items(), key=lambda x:x[1]) ]
