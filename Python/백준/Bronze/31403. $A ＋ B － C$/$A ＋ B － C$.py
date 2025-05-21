@@ -1,0 +1,5 @@
+a=input()
+b=input()
+c=input()
+print(int(a)+int(b)-int(c))
+print(int(f'{a}{b}')-int(c))
