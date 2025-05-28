@@ -4,4 +4,4 @@ while True:
     socks= wives*wives
     cats = socks*wives
     kitties = cats*wives
-    print('{0:.2f}'.format(round(1+socks+cats+kitties+wives,2)))
+    print(f'{round(1+socks+cats+kitties+wives,2):.2f}')
