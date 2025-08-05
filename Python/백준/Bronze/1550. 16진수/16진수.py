@@ -1,0 +1,1 @@
+print(int(f'0x{input()}',16))
