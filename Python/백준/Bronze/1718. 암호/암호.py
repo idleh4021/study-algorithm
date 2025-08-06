@@ -1,4 +1,4 @@
-alpabet = list('abcdefghijklmnopqrstuvwxyz') *2
+alpabet = list('abcdefghijklmnopqrstuvwxyz')
 
 t= input()
 k = input()
