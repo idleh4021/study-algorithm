@@ -16,7 +16,7 @@ for _ in range(int(input())):
     for idx in range(len(arr)//2):
         x = arr[idx*2]
         y = arr[idx*2+1]
-        scores.append(getScore(getDistance(abs(x),abs(y))))
+        scores.append(getScore(getDistance(x,y)))
     p1 = sum(scores[:3])
     p2 = sum(scores[3:])
     
